@@ -5,7 +5,7 @@ module SSLFilter;
 export {
     # Any domain listed here will ignore the exact domain AND all of its subdomains (*.domain)
     const ignored_domains: set[string] = {
-        # Microsoft Defender
+        # Microsoft Defender & Microsoft noisy telemetry
         "endpoint.security.microsoft.com",
         "defender.microsoft.com",
         "wd.microsoft.com",
@@ -19,7 +19,6 @@ export {
         "urs.microsoft.com",
         "atp.azure.com",
         "winatp-gw-ukw.microsoft.com",
-        # Microsoft Telemetry & Misc
         "events.data.microsoft.com",
         "client.wns.windows.com",
         "telemetry.microsoft.com",
@@ -36,7 +35,6 @@ export {
         "autopatch.microsoft.com",
         # Other things
         "android.clients.google.com",
-        "gstatic.com",
     } &redef;
 }
 
